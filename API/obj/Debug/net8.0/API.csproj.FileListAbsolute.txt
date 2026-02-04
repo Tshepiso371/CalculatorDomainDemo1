@@ -1,0 +1,8 @@
+C:\Users\Training Center 1\Downloads\CalculatorDomainDemo1\CalculatorDomainDemo1\API\obj\Debug\net8.0\API.csproj.AssemblyReference.cache
+C:\Users\Training Center 1\Downloads\CalculatorDomainDemo1\CalculatorDomainDemo1\API\obj\Debug\net8.0\API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Training Center 1\Downloads\CalculatorDomainDemo1\CalculatorDomainDemo1\API\obj\Debug\net8.0\API.AssemblyInfoInputs.cache
+C:\Users\Training Center 1\Downloads\CalculatorDomainDemo1\CalculatorDomainDemo1\API\obj\Debug\net8.0\API.AssemblyInfo.cs
+C:\Users\Training Center 1\Downloads\CalculatorDomainDemo1\CalculatorDomainDemo1\API\obj\Debug\net8.0\API.csproj.CoreCompileInputs.cache
+C:\Users\Training Center 1\Downloads\CalculatorDomainDemo1\CalculatorDomainDemo1\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Training Center 1\Downloads\CalculatorDomainDemo1\CalculatorDomainDemo1\API\obj\Debug\net8.0\API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Training Center 1\Downloads\CalculatorDomainDemo1\CalculatorDomainDemo1\API\obj\Debug\net8.0\API.sourcelink.json

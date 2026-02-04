@@ -1,7 +1,8 @@
-using CalculatorDomainDemo.Domain;  
+using CalculatorDomain.Domain;  
 using CalculatorDomain.Logic;
 using Microsoft.AspNetCore.Mvc;
-using CalculatorDomainDemo;
+using CalculatorDomain.Domain; 
+using CalculatorDomain;
 
 
 namespace API.controllers
@@ -24,12 +25,24 @@ namespace API.controllers
             return Ok(calculations);
         }
 
-        [HttpPost] //POST /api/calculations
-        public async Task<IActionResult> Calculate([FromBody]CalculationRequest request)
-        {
-            var result = await _calculator.CalculateAsync(request);
-            return Ok(result);
 
+        // 4 February 2026
+        [HttpPost]
+        public async Task<IActionResult> Calculate([FromBody] CreateCalculationDto dto)
+        {
+
+             if(ModelState.Invalid)
+          {
+            return BadRequest(ModelState);
+          } 
+
+          else
+            {
+                 CalculationRequest request = new(dto.left,dto.right,dto.Operand);
+                 var results = await _calculator.CalculateAsync(request);
+                 return Ok(results);
+            }
+           
         }
         
     }

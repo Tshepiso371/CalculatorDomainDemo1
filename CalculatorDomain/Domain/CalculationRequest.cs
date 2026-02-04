@@ -1,5 +1,5 @@
 namespace CalculatorDomainDemo;
-public record CalculationRequest(
+public  class CalculationRequest(
     double left,
     double right,
     OperationType Operation

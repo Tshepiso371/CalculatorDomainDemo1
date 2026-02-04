@@ -1,16 +1,17 @@
 using System.Reflection;
 using CalculatorDomain.Logic;
 using CalculatorDomain.Persistence;
-using CalculatorDomainDemo.Persistence;
+using CalculatorDomain.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var dataDirectory = Path.Combine(
+var dataDirectory = Path.Combine
+(
     builder.Environment.ContentRootPath,
     "Data"
 );
 
-builder.Services.AddSingleton<ICalculationStore>(
+builder.Services.AddSingleton<ICalculationStore>(   
     new FileCalculationStore(dataDirectory)
 );
 
