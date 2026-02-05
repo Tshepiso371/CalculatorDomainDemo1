@@ -25,6 +25,8 @@ builder.Services.AddSingleton<CalculatorService>();
 
 var app = builder.Build();
 
+app.UseMiddleware<ExceptionHandlingMiddleware>(); // 05 Feb 2026
+
 app.MapControllers(); 
 
 // Configure the HTTP request pipeline.
