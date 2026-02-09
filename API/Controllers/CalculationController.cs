@@ -2,12 +2,14 @@ using CalculatorDomainDemo.Domain;
 using CalculatorDomain.Logic;
 using Microsoft.AspNetCore.Mvc;
 using CalculatorDomainDemo;
+using Microsoft.AspNetCore.Authorization;
 
 
 namespace API.controllers
 {
     [ApiController]
     [Route("api/calculations")]
+    [Authorize]
     public class CalculationsController : ControllerBase
     {
         private readonly CalculatorService _calculator;
@@ -17,13 +19,18 @@ namespace API.controllers
             _calculator = calculator;
         }
 
+      /*  [HttpGet] //GET /api/calculations
+        public async Task<IActionResult> GetAll()
+        {
+            var calculations = await _calculator.GetAllAsync();
+            return Ok(calculations);
+        }
+       */
         [HttpPost] //POST /api/calculations
         public async Task<IActionResult> Calculate([FromBody] CreateCalculationDto dto)
         {
 
-            try {         // 05 Feb 2026
-        
-             var request = new CalculationRequest(
+                 var request = new CalculationRequest(
                 dto.left,
                 dto.right,
                 dto.operand
@@ -37,14 +44,8 @@ namespace API.controllers
                 };
 
                 return Ok(response);
-
-                   
-            }
-            catch (ArgumentException ex)
-            {
-                return BadRequest(new { error = ex.Message });
-            }
-
+          
+          
 
         }
 
